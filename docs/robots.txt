@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cru121.github.io/terra-mirabilis-docs/sitemap.xml

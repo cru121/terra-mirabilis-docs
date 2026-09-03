@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local tooling config (machine-specific paths)
+/.claude/
+
+# Never commit the mod's own source files, even if copied in by accident.
+# The generator reads them from a separate mod checkout; they are not part of
+# this docs repo.
+/Core/
+/ArtDefs/
+/Platforms/
+*.modinfo
+*.dep

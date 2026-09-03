@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="Browse every Terra Mirabilis natural wonder — yields, effects, placement and history.">
+<title>Terra Mirabilis — Natural Wonders reference</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">🌋 <span>Terra Mirabilis</span></a>
+  <nav class="topnav"><a href="index.html" class="active">Wonders</a><a href="about.html" class="">About the mod</a></nav>
+</header>
+<main>
+
+<section class="hero">
+  <h1>Natural Wonders of Terra Mirabilis</h1>
+  <p class="lede">Terra Mirabilis reworks every Natural Wonder in Civilization&nbsp;VI and adds a set of brand-new ones. Browse each wonder's yields, special effect, placement rules and history below — no need to launch the game.</p>
+</section>
+
+<div class="controls">
+  <input id="search" type="search" placeholder="Search wonders, yields or effects…" aria-label="Search">
+  <div class="chips" id="filters">
+    <button class="chip active" data-filter="all">All <span class="count">52</span></button>
+    <button class="chip" data-filter="new">New <span class="count">20</span></button>
+    <button class="chip" data-filter="rework">Reworked <span class="count">32</span></button>
+  </div>
+</div>
+<p class="noresults" id="noresults" hidden>No wonders match your search.</p>
+<section id="new">
+  <h2>New wonders <span class="muted">· 20</span></h2>
+  <p class="section-sub">Fan-favourite wonders this mod adds to the game.</p>
+  <div class="grid"><a class="card" href="wonders/barringer-crater.html"
+   data-name="barringer crater" data-cat="new"
+   data-req="BASE" data-search="barringer crater one tile natural wonder. yields +3 science and +2 gold. receive +20% production toward space race projects in the city that owns this tile.">
+  <div class="card-head"><h3>Barringer Crater</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Gold">💰&nbsp;+2</span><span class="yield" title="Science">🔬&nbsp;+3</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Receive +20% Production toward Space Race projects in the City that owns this tile.</p>
+</a><a class="card" href="wonders/bioluminescent-bay.html"
+   data-name="bioluminescent bay" data-cat="new"
+   data-req="BASE" data-search="bioluminescent bay one tile natural wonder. yields +3 science, +1 food, and +1 gold. fishing boats yield +1 science for any civilization that owns this tile.">
+  <div class="card-head"><h3>Bioluminescent Bay</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+1</span><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Science">🔬&nbsp;+3</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Fishing Boats yield +1 Science for any Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/cerro-de-potosi.html"
+   data-name="cerro de potosi" data-cat="new"
+   data-req="BASE" data-search="cerro de potosi one tile impassable natural wonder. appears as a mountain. adjacent plots yield +1 production and +1 gold. international trade routes from the city that owns this tile yield +4 gold.">
+  <div class="card-head"><h3>Cerro de Potosi</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">Impassable</span></div>
+  <div class="yields"><span class="yield" title="Production">🔨&nbsp;+1</span><span class="yield" title="Gold">💰&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">International Trade Routes from the City that owns this tile yield +4 Gold.</p>
+</a><a class="card" href="wonders/dallol.html"
+   data-name="dallol" data-cat="new"
+   data-req="BASE" data-search="dallol one tile natural wonder. provides +2 science, +2 production and +1 gold. grants a free copy of the sylvite luxury resource (not tradeable), which provides +6 amenities, to any civilization that owns this tile.">
+  <div class="card-head"><h3>Dallol</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Production">🔨&nbsp;+2</span><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Science">🔬&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Grants a free copy of the Sylvite luxury resource (not tradeable), which provides +6 Amenities, to any Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/grand-mesa.html"
+   data-name="grand mesa" data-cat="new"
+   data-req="BASE" data-search="grand mesa one tile impassable natural wonder. adjacent plots yield +1 food and +1 culture. units ignore movement penalties in forest or jungle for any civilization that owns this tile.">
+  <div class="card-head"><h3>Grand Mesa</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">Impassable</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Units ignore Movement penalties in Forest or Jungle for any Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/krakatoa.html"
+   data-name="krakatoa" data-cat="new"
+   data-req="XP2" data-search="krakatoa one tile impassable natural wonder. appears as a volcano. adjacent plots yield +1 science. provides additional yields on eruption at the cost of population and damage to infrastructure. always active. any civilization that owns this tile receives a free eureka upon earning a great admiral.">
+  <div class="card-head"><h3>Krakatoa</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Gathering Storm</span><span class="badge">Impassable</span><span class="badge water">Coastal</span></div>
+  <div class="yields"><span class="yield" title="Science">🔬&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Any Civilization that owns this tile receives a free Eureka upon earning a Great Admiral.</p>
+</a><a class="card" href="wonders/lake-victoria.html"
+   data-name="lake victoria" data-cat="new"
+   data-req="BASE" data-search="lake victoria four tile natural wonder. appears as a lake and provides fresh water. yields +3 food, +1 culture, and +1 gold. any civilization that owns at least one of these tiles receives +15% growth in cities not on their original capital&#x27;s continent.">
+  <div class="card-head"><h3>Lake Victoria</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">4 tiles</span><span class="badge water">Fresh water</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+3</span><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Any Civilization that owns at least one of these tiles receives +15% Growth in Cities not on their original Capital&#x27;s continent.</p>
+</a><a class="card" href="wonders/ounianga.html"
+   data-name="lakes of ounianga" data-cat="new"
+   data-req="BASE" data-search="lakes of ounianga two tile natural wonder. provides fresh water. yields +2 food, +2 culture, and +1 gold. oases provide major adjacency bonuses to specialty districts for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Lakes of Ounianga</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">2 tiles</span><span class="badge water">Fresh water</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+2</span><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Oases provide major adjacency bonuses to Specialty Districts for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/lencois-maranhenses.html"
+   data-name="lençóis maranhenses" data-cat="new"
+   data-req="BASE" data-search="lençóis maranhenses two tile natural wonder. provides fresh water. yields +2 food, +3 culture. floodplains yield +1 culture for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Lençóis Maranhenses</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">2 tiles</span><span class="badge water">Fresh water</span><span class="badge water">Coastal</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+2</span><span class="yield" title="Culture">🎭&nbsp;+3</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Floodplains yield +1 Culture for any civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/mosi-oa-tunya.html"
+   data-name="mosi-oa-tunya" data-cat="new"
+   data-req="BASE" data-search="mosi-oa-tunya one tile impassable natural wonder. provides fresh water. adjacent plots yield +2 food. improved bonus resources adjacent to a river provide +1 food for the civilization that owns this tile.">
+  <div class="card-head"><h3>Mosi-oa-Tunya</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">Impassable</span><span class="badge water">Fresh water</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+2</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Improved bonus resources adjacent to a river provide +1 Food for the Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/motlatse-canyon.html"
+   data-name="motlatse canyon" data-cat="new"
+   data-req="BASE" data-search="motlatse canyon four tile impassable natural wonder. adjacent plots yield +1 culture and +1 science. river tiles with breathtaking appeal yield +1 gold for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Motlatse Canyon</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">4 tiles</span><span class="badge">Impassable</span><span class="badge water">Fresh water</span></div>
+  <div class="yields"><span class="yield" title="Science">🔬&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">River tiles with Breathtaking appeal yield +1 Gold for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/kailash.html"
+   data-name="mount kailash" data-cat="new"
+   data-req="BASE" data-search="mount kailash one tile impassable natural wonder. appears as a mountain. adjacent plots yield +1 faith and +1 culture. receive +1 culture for every foreign city that follows the religion of the civilization that owns this tile.">
+  <div class="card-head"><h3>Mount Kailash</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">Impassable</span></div>
+  <div class="yields"><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="yield" title="Faith">✨&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Receive +1 Culture for every foreign City that follows the Religion of the Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/sinai.html"
+   data-name="mount sinai" data-cat="new"
+   data-req="BASE" data-search="mount sinai one tile impassable natural wonder. appears as a mountain. adjacent plots yield +2 faith. holy sites provide +1 great person points toward great prophets for the player that owns this tile. religious units may be purchased for 20% less faith.">
+  <div class="card-head"><h3>Mount Sinai</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">Impassable</span></div>
+  <div class="yields"><span class="yield" title="Faith">✨&nbsp;+2</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Holy Sites provide +1 Great Person Points toward Great Prophets for the player that owns this tile. Religious units may be purchased for 20% less Faith.</p>
+</a><a class="card" href="wonders/namib.html"
+   data-name="namib sand sea" data-cat="new"
+   data-req="BASE" data-search="namib sand sea three tile natural wonder. yields +3 culture and +2 gold. foreign trade routes that pass through your cities provide +1 culture for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Namib Sand Sea</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">3 tiles</span></div>
+  <div class="yields"><span class="yield" title="Gold">💰&nbsp;+2</span><span class="yield" title="Culture">🎭&nbsp;+3</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Foreign Trade Routes that pass through your cities provide +1 Culture for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/old-faithful.html"
+   data-name="old faithful" data-cat="new"
+   data-req="BASE" data-search="old faithful one tile natural wonder. yields +3 science, +1 faith, and +1 gold. campus districts trigger a culture bomb in any city. double adjacency bonuses for campus districts if their city has a national park.">
+  <div class="card-head"><h3>Old Faithful</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Science">🔬&nbsp;+3</span><span class="yield" title="Faith">✨&nbsp;+1</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Campus districts trigger a culture bomb in any City. Double adjacency bonuses for Campus districts if their City has a National Park.</p>
+</a><a class="card" href="wonders/gibraltar.html"
+   data-name="rock of gibraltar" data-cat="new"
+   data-req="BASE" data-search="rock of gibraltar one tile impassable natural wonder. adjacent plots yield +1 food and +1 gold. encampments and harbors receive +2 great person points of their respective type in the city that owns this tile.">
+  <div class="card-head"><h3>Rock of Gibraltar</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">Impassable</span><span class="badge water">Coastal</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+1</span><span class="yield" title="Gold">💰&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Encampments and Harbors receive +2 Great Person Points of their respective type in the City that owns this tile.</p>
+</a><a class="card" href="wonders/salar-de-uyuni.html"
+   data-name="salar de uyuni" data-cat="new"
+   data-req="BASE" data-search="salar de uyuni four tile natural wonder. yields +2 science, +1 production, and +2 gold. grants a free copy of the lithium luxury resource (not tradeable), which provides +6 amenities, to any player that owns at least one of these tiles.">
+  <div class="card-head"><h3>Salar de Uyuni</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">4 tiles</span></div>
+  <div class="yields"><span class="yield" title="Production">🔨&nbsp;+1</span><span class="yield" title="Gold">💰&nbsp;+2</span><span class="yield" title="Science">🔬&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Grants a free copy of the Lithium luxury resource (not tradeable), which provides +6 Amenities, to any player that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/sri-pada.html"
+   data-name="sri pada" data-cat="new"
+   data-req="BASE" data-search="sri pada one tile impassable natural wonder. appears as a mountain. adjacent plots yield +1 food and +1 faith. religious units from any civilization that owns this tile receive culture upon converting a city to their religion for the first time.">
+  <div class="card-head"><h3>Sri Pada</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">Impassable</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+1</span><span class="yield" title="Faith">✨&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Religious units from any Civilization that owns this tile receive Culture upon converting a City to their Religion for the first time.</p>
+</a><a class="card" href="wonders/vredefort-dome.html"
+   data-name="vredefort dome" data-cat="new"
+   data-req="BASE" data-search="vredefort dome two tile natural wonder. yields +2 food, +2 science, and +1 culture. farms provide +1 food when adjacent to another farm for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Vredefort Dome</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Base game</span><span class="badge">2 tiles</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+2</span><span class="yield" title="Science">🔬&nbsp;+2</span><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Farms provide +1 Food when adjacent to another Farm for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/wulingyuan.html"
+   data-name="wulingyuan" data-cat="new"
+   data-req="DLC6" data-search="wulingyuan two tile impassable natural wonder. adjacent plots yield +2 culture great works of writing yield +2 culture and +2 tourism for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Wulingyuan</h3></div>
+  <div class="badges"><span class="badge new">New</span><span class="badge dlc">Khmer &amp; Indonesia Pack</span><span class="badge">2 tiles</span><span class="badge">Impassable</span></div>
+  <div class="yields"><span class="yield" title="Culture">🎭&nbsp;+2</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Great Works of Writing yield +2 Culture and +2 Tourism for any Civilization that owns at least one of these tiles.</p>
+</a></div>
+</section>
+<section id="reworked">
+  <h2>Reworked wonders <span class="muted">· 32</span></h2>
+  <p class="section-sub">Base-game and expansion wonders, rebalanced by the mod.</p>
+  <div class="grid"><a class="card" href="wonders/chocolatehills.html"
+   data-name="chocolate hills" data-cat="rework"
+   data-req="XP2" data-search="chocolate hills four tile natural wonder. yields +2 culture, +2 production and +1 food. any civilization that owns at least one of these tiles exerts +25% tourism toward other civilizations with whom they have a trade route.">
+  <div class="card-head"><h3>Chocolate Hills</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Gathering Storm</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+1</span><span class="yield" title="Production">🔨&nbsp;+2</span><span class="yield" title="Culture">🎭&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Any Civilization that owns at least one of these tiles exerts +25% Tourism toward other Civilizations with whom they have a Trade Route.</p>
+</a><a class="card" href="wonders/cliffs-dover.html"
+   data-name="cliffs of dover" data-cat="rework"
+   data-req="BASE" data-search="cliffs of dover two tile natural wonder. appears as cliffs. yields +3 culture, +1 food, and +1 gold. harbors receive minor adjacency bonuses from cliffs for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Cliffs of Dover</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+1</span><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+3</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Harbors receive minor adjacency bonuses from Cliffs for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/crater-lake.html"
+   data-name="crater lake" data-cat="rework"
+   data-req="BASE" data-search="crater lake one tile natural wonder. appears as a lake and provides fresh water. yields +4 faith and +1 science. may purchase any building with faith in the city that owns this tile.">
+  <div class="card-head"><h3>Crater Lake</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Science">🔬&nbsp;+1</span><span class="yield" title="Faith">✨&nbsp;+4</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">May purchase any Building with Faith in the City that owns this tile.</p>
+</a><a class="card" href="wonders/dead-sea.html"
+   data-name="dead sea" data-cat="rework"
+   data-req="BASE" data-search="dead sea two tile natural wonder. appears as a lake. yields +2 faith, +2 culture, and +1 gold. units may heal an additional 10 hp when fortified for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Dead Sea</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+2</span><span class="yield" title="Faith">✨&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Units may heal an additional 10 HP when Fortified for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/delicate-arch.html"
+   data-name="delicate arch" data-cat="rework"
+   data-req="XP1" data-search="delicate arch one tile impassable natural wonder. adjacent plots yield +1 culture and +1 gold. plots are 20% cheaper to purchase for any civilization that owns this tile.">
+  <div class="card-head"><h3>Delicate Arch</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Rise &amp; Fall</span></div>
+  <div class="yields"><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Plots are 20% cheaper to purchase for any Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/eye-of-the-sahara.html"
+   data-name="eye of the sahara" data-cat="rework"
+   data-req="XP1" data-search="eye of the sahara three tile natural wonder. yields +2 production, +2 science, and +1 gold. any civilization that owns at least one of these tiles receives +1 era score from historic moments if that moment is usually worth at least +4 era score.">
+  <div class="card-head"><h3>Eye of the Sahara</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Rise &amp; Fall</span></div>
+  <div class="yields"><span class="yield" title="Production">🔨&nbsp;+2</span><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Science">🔬&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Any Civilization that owns at least one of these tiles receives +1 Era Score from Historic Moments if that Moment is usually worth at least +4 Era Score.</p>
+</a><a class="card" href="wonders/eyjafjallajokull.html"
+   data-name="eyjafjallajökull" data-cat="rework"
+   data-req="DLC2" data-search="eyjafjallajökull two tile impassable natural wonder. appears as a mountain. adjacent plots yield +1 culture and +1 food. specialty districts constructed on tundra or snow terrain yield +1 food for any civilization that owns this tile.">
+  <div class="card-head"><h3>Eyjafjallajökull</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Vikings Scenario Pack</span></div>
+  <div class="yields"><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Specialty Districts constructed on Tundra or Snow terrain yield +1 Food for any Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/fountain-of-youth.html"
+   data-name="fountain of youth" data-cat="rework"
+   data-req="DLC7" data-search="fountain of youth one tile natural wonder. provides fresh water. yields +3 science and +2 faith. land combat units from any civilization that owns this tile receive the &#x27;water of life&#x27; ability, allowing it to heal when ending a turn adjacent to a source of fresh water.">
+  <div class="card-head"><h3>Fountain of Youth</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Maya &amp; Gran Colombia Pack</span></div>
+  <div class="yields"><span class="yield" title="Science">🔬&nbsp;+3</span><span class="yield" title="Faith">✨&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Land combat units from any civilization that owns this tile receive the &#x27;Water of Life&#x27; ability, allowing it to heal when ending a turn adjacent to a source of …</p>
+</a><a class="card" href="wonders/galapagos.html"
+   data-name="galápagos" data-cat="rework"
+   data-req="BASE" data-search="galápagos two tile impassable natural wonder. adjacent plots yield +2 science. grants a free copy of the tortoise luxury resource (not tradeable), which provides +6 amenities, to any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Galápagos</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Science">🔬&nbsp;+2</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Grants a free copy of the Tortoise luxury resource (not tradeable), which provides +6 Amenities, to any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/giants-causeway.html"
+   data-name="giant&#x27;s causeway" data-cat="rework"
+   data-req="DLC2" data-search="giant&#x27;s causeway two tile impassable natural wonder. adjacent plots yield +2 culture. land units trained in a city that owns at least one of these tiles start with a free promotion.">
+  <div class="card-head"><h3>Giant&#x27;s Causeway</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Vikings Scenario Pack</span></div>
+  <div class="yields"><span class="yield" title="Culture">🎭&nbsp;+2</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Land units trained in a City that owns at least one of these tiles start with a free Promotion.</p>
+</a><a class="card" href="wonders/gobustan.html"
+   data-name="gobustan" data-cat="rework"
+   data-req="XP2" data-search="gobustan three tile natural wonder. yields +3 culture, +1 production, and +1 science. improved sources of oil accumulate 2 more resources per turn for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Gobustan</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Gathering Storm</span></div>
+  <div class="yields"><span class="yield" title="Production">🔨&nbsp;+1</span><span class="yield" title="Science">🔬&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+3</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Improved sources of Oil accumulate 2 more resources per turn for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/barrier-reef.html"
+   data-name="great barrier reef" data-cat="rework"
+   data-req="BASE" data-search="great barrier reef two tile natural wonder. yields +2 food, +1 gold, and +2 science. improved sea resources yield +1 gold for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Great Barrier Reef</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+2</span><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Science">🔬&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Improved sea resources yield +1 Gold for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/ha-long-bay.html"
+   data-name="ha long bay" data-cat="rework"
+   data-req="DLC6" data-search="ha long bay two tile natural wonder. yields +2 culture, +2 food and +1 production. harbors provide +2 housing for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Ha Long Bay</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Khmer &amp; Indonesia Pack</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+2</span><span class="yield" title="Production">🔨&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Harbors provide +2 Housing for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/ikkil.html"
+   data-name="ik-kil cenote" data-cat="rework"
+   data-req="XP2" data-search="ik-kil cenote one tile impassable natural wonder. provides fresh water. adjacent plots yield +1 science, and +1 faith. +15% production toward wonders for any civilization that owns this tile.">
+  <div class="card-head"><h3>Ik-Kil Cenote</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Gathering Storm</span></div>
+  <div class="yields"><span class="yield" title="Science">🔬&nbsp;+1</span><span class="yield" title="Faith">✨&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">+15% Production toward Wonders for any Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/lake-retba.html"
+   data-name="lake retba" data-cat="rework"
+   data-req="XP1" data-search="lake retba two tile natural wonder. appears as a lake. yields +2 culture, +2 gold, +1 production. any civilization that owns at least one of these tiles receives +2 gold for each unique copy of a luxury resource that they own.">
+  <div class="card-head"><h3>Lake Retba</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Rise &amp; Fall</span></div>
+  <div class="yields"><span class="yield" title="Production">🔨&nbsp;+1</span><span class="yield" title="Gold">💰&nbsp;+2</span><span class="yield" title="Culture">🎭&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Any Civilization that owns at least one of these tiles receives +2 Gold for each unique copy of a Luxury resource that they own.</p>
+</a><a class="card" href="wonders/lysefjorden.html"
+   data-name="lysefjorden" data-cat="rework"
+   data-req="DLC2" data-search="lysefjorden three tile natural wonder. adjacent plots yield +1 culture and +1 science naval units trained in a city that owns at least one of these tiles start with a free promotion.">
+  <div class="card-head"><h3>Lysefjorden</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Vikings Scenario Pack</span></div>
+  <div class="yields"><span class="yield" title="Science">🔬&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Naval units trained in a City that owns at least one of these tiles start with a free Promotion.</p>
+</a><a class="card" href="wonders/devilstower.html"
+   data-name="mato tipila (devils tower)" data-cat="rework"
+   data-req="XP2" data-search="mato tipila (devils tower) one tile impassable natural wonder. adjacent plots yield +1 faith and +1 production. naturalists are 50% cheaper to purchase for any civilization that owns this tile.">
+  <div class="card-head"><h3>Mato Tipila (Devils Tower)</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Gathering Storm</span></div>
+  <div class="yields"><span class="yield" title="Production">🔨&nbsp;+1</span><span class="yield" title="Faith">✨&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Naturalists are 50% cheaper to purchase for any Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/matterhorn.html"
+   data-name="matterhorn" data-cat="rework"
+   data-req="XP1" data-search="matterhorn one tile impassable natural wonder. appears as a mountain. adjacent plots yield +2 culture. units ignore movement penalties on hills for any civilization that owns this tile.">
+  <div class="card-head"><h3>Matterhorn</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Rise &amp; Fall</span></div>
+  <div class="yields"><span class="yield" title="Culture">🎭&nbsp;+2</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Units ignore Movement penalties on Hills for any Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/everest.html"
+   data-name="mount everest" data-cat="rework"
+   data-req="BASE" data-search="mount everest three tile impassable natural wonder. appears as a mountain. adjacent plots yield +2 faith. religious units receive +1 additional spread charge for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Mount Everest</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Faith">✨&nbsp;+2</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Religious units receive +1 additional spread charge for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/kilimanjaro.html"
+   data-name="mount kilimanjaro" data-cat="rework"
+   data-req="BASE" data-search="mount kilimanjaro one tile impassable natural wonder. appears as a mountain. adjacent plots yield +2 food. receive +1 population in the city that owns this tile when a specialty district is constructed.">
+  <div class="card-head"><h3>Mount Kilimanjaro</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Receive +1 Population in the City that owns this tile when a Specialty District is constructed.</p>
+</a><a class="card" href="wonders/roraima.html"
+   data-name="mount roraima" data-cat="rework"
+   data-req="XP1" data-search="mount roraima four tile impassable natural wonder. appears as a mountain. adjacent plots yield +1 faith and +1 science. owned jungle tiles do not reduce the appeal of adjacent plots for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Mount Roraima</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Rise &amp; Fall</span></div>
+  <div class="yields"><span class="yield" title="Science">🔬&nbsp;+1</span><span class="yield" title="Faith">✨&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Owned Jungle tiles do not reduce the appeal of adjacent plots for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/vesuvius.html"
+   data-name="mount vesuvius" data-cat="rework"
+   data-req="XP2" data-search="mount vesuvius one tile impassable natural wonder. appears as a volcano. adjacent plots yield +1 production. provides additional yields on eruption at the cost of population and damage to infrastructure. always active. antiquity sites yield +4 culture, and artifacts yield +2 culture and +2 tourism for any civilization that owns this tile.">
+  <div class="card-head"><h3>Mount Vesuvius</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Gathering Storm</span></div>
+  <div class="yields"><span class="yield" title="Production">🔨&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Antiquity Sites yield +4 Culture, and Artifacts yield +2 Culture and +2 Tourism for any Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/paititi.html"
+   data-name="paititi" data-cat="rework"
+   data-req="DLC7" data-search="paititi three tile impassable natural wonder. adjacent plots yield +2 culture. receive +100% gold in any city that owns at least one of these tiles.">
+  <div class="card-head"><h3>Paititi</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Maya &amp; Gran Colombia Pack</span></div>
+  <div class="yields"><span class="yield" title="Culture">🎭&nbsp;+2</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Receive +100% Gold in any city that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/pamukkale.html"
+   data-name="pamukkale" data-cat="rework"
+   data-req="XP2" data-search="pamukkale two tile impassable natural wonder. provies fresh water. adjacent plots yield +1 culture and +1 gold. regional buildings within entertainment complex or waterpark districts provide +1 amenity to cities within range for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Pamukkale</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Gathering Storm</span></div>
+  <div class="yields"><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Regional buildings within Entertainment Complex or Waterpark districts provide +1 Amenity to cities within range for any Civilization that owns at least one of …</p>
+</a><a class="card" href="wonders/pantanal.html"
+   data-name="pantanal" data-cat="rework"
+   data-req="BASE" data-search="pantanal four tile natural wonder. appears as marsh. provides +3 food and +2 culture. marsh tiles provide standard adjacency bonuses for specialty districts for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Pantanal</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+3</span><span class="yield" title="Culture">🎭&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Marsh tiles provide standard adjacency bonuses for Specialty Districts for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/piopiotahi.html"
+   data-name="piopiotahi (milford sound)" data-cat="rework"
+   data-req="BASE" data-search="piopiotahi (milford sound) three tile impassable natural wonder. adjacent plots yield +1 culture and +1 gold. amenities provided by regional buildings extend 3 tiles further for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Piopiotahi (Milford Sound)</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Amenities provided by regional buildings extend 3 tiles further for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/whitedesert.html"
+   data-name="sahara el beyda (white desert)" data-cat="rework"
+   data-req="XP2" data-search="sahara el beyda (white desert) four tile natural wonder. yields +3 gold, +1 science, and +1 culture. cities are immune to damage from dust storms for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Sahara el Beyda (White Desert)</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Gathering Storm</span></div>
+  <div class="yields"><span class="yield" title="Gold">💰&nbsp;+3</span><span class="yield" title="Science">🔬&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Cities are immune to damage from Dust Storms for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/tsingy.html"
+   data-name="tsingy de bemaraha" data-cat="rework"
+   data-req="BASE" data-search="tsingy de bemaraha one tile impassable natural wonder. adjacent plots yield +1 culture and +1 science. theater districts trigger a culture bomb in any city. double adjacency bonuses for theater districts if their city has a national park.">
+  <div class="card-head"><h3>Tsingy de Bemaraha</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Science">🔬&nbsp;+1</span><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Theater districts trigger a culture bomb in any City. Double adjacency bonuses for Theater districts if their City has a National Park.</p>
+</a><a class="card" href="wonders/ubsunur-hollow.html"
+   data-name="ubsunur hollow" data-cat="rework"
+   data-req="XP1" data-search="ubsunur hollow four tile natural wonder. appears as marsh. yields +2 faith, +1 food, and +2 production. any civilization that owns at least one of these tiles receives a free inspiration upon earning a great general.">
+  <div class="card-head"><h3>Ubsunur Hollow</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Rise &amp; Fall</span></div>
+  <div class="yields"><span class="yield" title="Food">🌾&nbsp;+1</span><span class="yield" title="Production">🔨&nbsp;+2</span><span class="yield" title="Faith">✨&nbsp;+2</span><span class="scope tile">on the wonder tile</span></div>
+  <p class="teaser">Any Civilization that owns at least one of these tiles receives a free Inspiration upon earning a Great General.</p>
+</a><a class="card" href="wonders/uluru.html"
+   data-name="uluru" data-cat="rework"
+   data-req="DLC3" data-search="uluru one tile impassable natural wonder. adjacent plots yield +1 culture and +1 faith. specialty districts constructed on desert terrain yield +1 food for any civilization that owns this tile.">
+  <div class="card-head"><h3>Uluru</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Australia Pack</span></div>
+  <div class="yields"><span class="yield" title="Culture">🎭&nbsp;+1</span><span class="yield" title="Faith">✨&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Specialty Districts constructed on desert terrain yield +1 Food for any Civilization that owns this tile.</p>
+</a><a class="card" href="wonders/yosemite.html"
+   data-name="yosemite" data-cat="rework"
+   data-req="BASE" data-search="yosemite two tile impassable natural wonder. adjacent plots yield +1 gold and +1 science. owned forest tiles provide an additional +1 appeal to adjacent plots for any civilization that owns at least one of these tiles.">
+  <div class="card-head"><h3>Yosemite</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Base game</span></div>
+  <div class="yields"><span class="yield" title="Gold">💰&nbsp;+1</span><span class="yield" title="Science">🔬&nbsp;+1</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Owned Forest tiles provide an additional +1 Appeal to adjacent plots for any Civilization that owns at least one of these tiles.</p>
+</a><a class="card" href="wonders/zhangye-danxia.html"
+   data-name="zhangye danxia" data-cat="rework"
+   data-req="XP1" data-search="zhangye danxia three tile impassable natural wonder. appears as a mountain. adjacent plots yield +2 science. commercial hubs and campus districts in a city that owns at least one of these tiles receive +2 great person points of their respective type.">
+  <div class="card-head"><h3>Zhangye Danxia</h3></div>
+  <div class="badges"><span class="badge rework">Reworked</span><span class="badge dlc">Rise &amp; Fall</span></div>
+  <div class="yields"><span class="yield" title="Science">🔬&nbsp;+2</span><span class="scope adj">on adjacent tiles</span></div>
+  <p class="teaser">Commercial Hubs and Campus districts in a City that owns at least one of these tiles receive +2 Great Person Points of their respective type.</p>
+</a></div>
+</section>
+<script>
+(function(){
+  var q=document.getElementById('search'), chips=document.querySelectorAll('#filters .chip');
+  var cards=[].slice.call(document.querySelectorAll('.card'));
+  var sections=[].slice.call(document.querySelectorAll('main section[id]'));
+  var nores=document.getElementById('noresults');
+  var filter='all', term='';
+  function apply(){
+    var shown=0;
+    cards.forEach(function(c){
+      var okCat = filter==='all' || c.dataset.cat===filter;
+      var okTerm = !term || c.dataset.search.indexOf(term)>-1 || c.dataset.name.indexOf(term)>-1;
+      var vis = okCat && okTerm; c.hidden=!vis; if(vis) shown++;
+    });
+    sections.forEach(function(s){
+      var any=s.querySelector('.card:not([hidden])'); s.hidden=!any;
+    });
+    nores.hidden = shown>0;
+  }
+  q.addEventListener('input', function(){ term=q.value.trim().toLowerCase(); apply(); });
+  chips.forEach(function(ch){ ch.addEventListener('click', function(){
+    chips.forEach(function(o){o.classList.remove('active');}); ch.classList.add('active');
+    filter=ch.dataset.filter; apply();
+  });});
+})();
+</script>
+</main>
+<footer class="site-footer">
+  <p>Unofficial fan reference for <a href="https://github.com/deliverator23/TerraMirabilis" target="_blank" rel="noopener">Terra Mirabilis</a>,
+     a Civilization VI mod by Deliverator &amp; ChimpanG (2026 community update by cru121).
+     Not affiliated with or endorsed by the original authors or Firaxis. All wonder designs, text and art belong to their creators.</p>
+  <p class="muted">Generated 2026-09-03 04:23 UTC from the mod's own data files.</p>
+</footer>
+</body>
+</html>
