@@ -45,7 +45,9 @@ def _resolve_mod_dir():
     base = base or os.environ.get("TM_MOD_DIR")
     candidates = ([base] if base else []) + [
         os.path.join(SCRIPT_DIR, ".."),                            # generator inside the mod repo
-        os.path.join(SCRIPT_DIR, "..", "..", "civ6-terra-mira"),   # sibling checkout
+        # Canonical source: the mod subfolder of the civ6-tweaks monorepo clone.
+        os.path.join(SCRIPT_DIR, "..", "..", "civ6-tweaks", "terra-mirabilis-2026"),
+        os.path.join(SCRIPT_DIR, "..", "..", "civ6-terra-mira"),   # legacy standalone repo (deprecated)
         os.path.join(os.environ.get("USERPROFILE", ""),
                      r"OneDrive\Documents\My Games\Sid Meier's Civilization VI\Mods\TerraMirabilis2026"),
         os.path.join(os.environ.get("USERPROFILE", ""),
