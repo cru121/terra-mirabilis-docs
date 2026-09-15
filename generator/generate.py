@@ -593,32 +593,59 @@ def mini_tile(url, label):
 
 def build_about(wonders):
     new = sum(1 for w in wonders if w.new)
+    # Each mechanic is (title, description, is_new). New-to-the-2026-update
+    # mechanics get a "New" tag and accent styling, and lead the grid.
     mechanics = [
+        ("Terrain-type interactions",
+         "Many wonders visually <strong>are</strong> a terrain type but are coded as their own feature, "
+         "so effects that key on the real type used to ignore them. This update teaches them across five "
+         "classes — e.g. <strong>Mountain</strong> wonders feed adjacent Terrace Farms, <strong>Reef</strong> "
+         "powers an Aquarium, <strong>Geothermal</strong> wonders enable Thermal Baths, and "
+         "<strong>Marsh</strong> / <strong>Lake</strong> wonders unlock their matching pantheons and wonders.",
+         True),
         ("Wonders power up your districts",
          "Every Natural Wonder gives a <strong>standard +1 adjacency bonus</strong> to an adjacent "
          "Specialty District — Holy Site (Faith), Campus (Science), Theater (Culture), "
-         "Industrial Zone (Production), and Commercial Hub / Harbor (Gold)."),
+         "Industrial Zone (Production), and Commercial Hub / Harbor (Gold).",
+         False),
         ("...and their buildings",
          "Buildings inside a Specialty District that sits next to a Natural Wonder gain "
-         "<strong>+1 to the district's base yield</strong>, so a wonder-side district keeps scaling."),
+         "<strong>+1 to the district's base yield</strong>, so a wonder-side district keeps scaling.",
+         False),
         ("More wonders on every map",
          "The number of Natural Wonders per map size is <strong>roughly doubled</strong> "
          "(e.g. 10 instead of 5 on a Standard map — placement permitting), and they may spawn "
-         "a little closer together."),
+         "a little closer together.",
+         False),
         ("Ownership effects",
          "Most wonders grant a unique <strong>ownership effect</strong> to whoever controls a tile "
-         "(shown on each wonder's page), on top of their tile yields."),
+         "(shown on each wonder's page), on top of their tile yields.",
+         False),
         ("National Parks pull their weight",
          "National Parks provide <strong>Gold equal to their Tourism</strong> and extra Amenities to "
-         "their city."),
+         "their city.",
+         False),
         ("A livelier settle race",
          "Wonders are more desirable to the AI (higher adjacent fertility) and grant more Era Score "
-         "and reveal XP, so racing to a wonder matters more."),
+         "and reveal XP, so racing to a wonder matters more.",
+         False),
     ]
-    mech_html = "".join(
-        f'<div class="mech"><h3>{t}</h3><p>{d}</p></div>' for t, d in mechanics)
 
-    fixes = [
+    def mech_card(t, d, is_new):
+        cls = "mech is-new" if is_new else "mech"
+        tag = '<span class="new-tag">New</span>' if is_new else ""
+        return f'<div class="{cls}">{tag}<h3>{t}</h3><p>{d}</p></div>'
+
+    mech_html = "".join(mech_card(*m) for m in mechanics)
+
+    # Release history is maintained by hand — the generator reads the mod's data
+    # files, not GitHub. Add the newest release at the top when one ships.
+    v2_fixes = [
+        "<strong>Ubsunur Hollow</strong> — earning a Great General now grants its free Inspiration, "
+        "delivered by the mod's first gameplay script (the original data-only effect could only ever "
+        "grant a Eureka).",
+    ]
+    v1_fixes = [
         "<strong>Mount Kailash</strong> — culture no longer stacks endlessly on every save/reload.",
         "<strong>Krakatoa</strong> — earning a Great Admiral now actually grants its free Eureka.",
         "<strong>Matterhorn</strong> &amp; <strong>Grand Mesa</strong> — their movement effects now work "
@@ -626,7 +653,8 @@ def build_about(wonders):
         "<strong>Victoria Falls</strong> — placement loosened so it reliably spawns.",
         "<strong>Lençóis Maranhenses</strong> — yields now apply in the base game, not only Gathering Storm.",
     ]
-    fixes_html = "".join(f"<li>{f}</li>" for f in fixes)
+    fixes_list = lambda items: "".join(f"<li>{f}</li>" for f in items)
+    v2_fixes_html, v1_fixes_html = fixes_list(v2_fixes), fixes_list(v1_fixes)
 
     # Original-mod links now live as tiles up top, so the credits carry no links.
     lower_html = ""
@@ -670,6 +698,17 @@ def build_about(wonders):
 </section>
 
 <section class="block">
+  <h2>The 2026 community update</h2>
+  <p class="section-sub">An unofficial continuation of the abandoned original, fixing long-standing
+  Workshop-reported bugs. It ships as GitHub releases — <strong>two so far</strong> — and the
+  download button above always grabs the newest.</p>
+  <p><strong>Latest release (v2)</strong> adds one more fix on top of v1:</p>
+  <ul class="fixes">{v2_fixes_html}</ul>
+  <p><strong>First release (v1)</strong> fixed a batch of long-standing bugs:</p>
+  <ul class="fixes">{v1_fixes_html}</ul>
+</section>
+
+<section class="block">
   <h2>How the mod works</h2>
   <p class="section-sub">Beyond each wonder's own yields and effect, Terra Mirabilis changes some
   universal rules of the game:</p>
@@ -677,13 +716,6 @@ def build_about(wonders):
   <p class="note">Nearly all of this is <strong>configurable</strong> — the mod ships a settings file
   where each of these can be toggled or tuned, and individual wonders can be turned off. Defaults are
   described above.</p>
-</section>
-
-<section class="block">
-  <h2>The 2026 community update</h2>
-  <p class="section-sub">An unofficial continuation of the abandoned original, fixing long-standing
-  Workshop-reported bugs. A few highlights:</p>
-  <ul class="fixes">{fixes_html}</ul>
 </section>
 
 <section class="block credits">
@@ -874,6 +906,10 @@ section h2{font-size:20px;margin:0 0 2px}
 .mech{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
 .mech h3{margin:0 0 6px;font-size:15px}
 .mech p{margin:0;color:var(--muted);font-size:14px}
+.mech.is-new{border-color:var(--new);background:color-mix(in srgb,var(--new) 8%,var(--panel))}
+.mech.is-new h3{color:var(--new)}
+.new-tag{display:inline-block;margin:0 0 8px;padding:2px 8px;border-radius:6px;background:var(--new);
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase}
 .note{margin-top:16px;padding:12px 16px;border-radius:10px;
   background:color-mix(in srgb,var(--accent) 8%,transparent);border:1px solid var(--line);font-size:14px}
 .fixes{margin:0;padding-left:20px}
